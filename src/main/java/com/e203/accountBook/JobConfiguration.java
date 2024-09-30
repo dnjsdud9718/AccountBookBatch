@@ -131,8 +131,8 @@ public class JobConfiguration {
             FcmSendDto fcm = FcmSendDto.builder()
                     .title(TITLE)
                     .body(message)
-//                    .token(user.getFCM())
-                    .token(FCM_TOKEN)
+                    .token(user.getFcmTokenKey())
+//                    .token(FCM_TOKEN)
                     .build();
 
             CommonResponse commonResponse = fcmService.sendMessageTo(fcm);
@@ -143,5 +143,4 @@ public class JobConfiguration {
             return item;
         };
     }
-
 }
